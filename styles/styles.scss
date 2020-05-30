@@ -1,0 +1,303 @@
+$hoverColor:#ef6724;
+$fontColor:black;
+
+@mixin flexdisplay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.topBar {
+    background: rgb(80, 69, 61);
+    background: linear-gradient(90deg, rgba(80, 69, 61, 1) 0%, rgba(121, 43, 9, 1) 35%, rgba(255, 136, 0, 1) 100%);
+}
+
+.list {
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 12px;
+
+}
+
+.item-list {
+
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+
+    &:hover {
+        color: white;
+        transition: 0.3s;
+        font-weight: bolder;
+    }
+}
+
+.navbar-toggler {
+    border: 2px solid orange !important;
+}
+
+.navbar-nav {
+    text-align: center !important;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.collapse.navbar-collapse {
+    justify-content: flex-end !important;
+}
+
+.centered {
+    color: whitesmoke;
+    background-color: black;
+    opacity: 80%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+
+    p {
+        padding: 10px;
+        ;
+        margin: 10px;
+        font-weight: bold;
+        font-size: 45px;
+    }
+}
+
+.section1 {
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        padding: 50px;
+    }
+}
+
+.myDeals {
+    justify-content: center;
+}
+
+.product {
+
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &:hover {
+        border: 1px solid $hoverColor;
+        cursor: pointer;
+    }
+
+    p {
+        font-size: 17px;
+        font-weight: bold;
+        margin: 20px;
+    }
+
+    .cijena {
+        color: red;
+    }
+
+
+}
+
+.section2 {
+    h3 {
+        font-weight: bold;
+        text-align: center;
+        padding: 50px;
+    }
+}
+
+.myShop {
+    justify-content: center;
+    align-items: center;
+}
+
+.productShop {
+    text-align: center;
+    padding: 10px;
+    background-color: white;
+    margin: 10px;
+
+    p {
+        font-weight: bold;
+    }
+
+    &:hover {
+        box-shadow: 5px 10px 8px 10px #888888;
+        border-radius: 7px;
+        cursor: pointer;
+    }
+
+}
+
+.sec3Slika img {
+    width: 100%;
+
+}
+
+.shopBack {
+    margin-bottom: 30px;
+}
+
+.sec3Main {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0 10px 0;
+    justify-content: center;
+
+}
+
+.sec3Parag {
+    padding: 30px;
+    max-width: 600px;
+}
+
+.best1 {
+    margin-left: -15px;
+}
+
+.best2 {
+    margin-left: 15px;
+}
+
+.section4 h3 {
+    text-align: center;
+    padding: 30px;
+
+}
+
+.section4Back {
+    background-color: #f3f3f3;
+}
+
+.parag {
+    text-align: center;
+    padding: 30px;
+}
+
+.support {
+    text-align: center;
+
+    i {
+        font-size: 50px;
+        color: $hoverColor;
+        padding: 5px;
+    }
+
+    p {
+        padding: 5px;
+    }
+}
+
+.fa.fa-truck {
+    font-size: 55px;
+}
+
+.logo {
+    @include flexdisplay();
+}
+
+
+.Pay {
+    @include flexdisplay();
+
+    img {
+        max-width: 60px;
+    }
+
+}
+
+.logoFooter img {
+    max-width: 150px;
+    border: 3px solid black;
+}
+
+.footer {
+    padding-top: 50px;
+    margin-top: 20px;
+}
+
+.footer h6 {
+    padding: 10px 0 10px 0;
+}
+
+.backFooter {
+    color: white;
+    background: rgb(80, 69, 61);
+    background: linear-gradient(90deg, rgba(80, 69, 61, 1) 0%, rgba(121, 43, 9, 1) 35%, rgba(255, 136, 0, 1) 100%);
+}
+
+.pad {
+    margin: 10px 0 10px 0;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .centered p {
+        font-size: 30px;
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .product {
+        padding: 10px;
+    }
+
+    .productShop {
+        margin-bottom: 50px;
+    }
+
+    .sec3Parag {
+        padding: 15px;
+    }
+
+    .Pay img {
+        max-width: 40px;
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .navbar-brand img {
+        max-width: 170px;
+    }
+
+    .product {
+        margin-bottom: 25px;
+    }
+
+    .productShop img {
+        max-width: 80px;
+    }
+
+    .best1 {
+        margin-left: 0px;
+    }
+
+    .best2 {
+        margin-left: 0px;
+    }
+
+
+}
